@@ -6,7 +6,7 @@ with clean URLs, so `terms.html` is served at `/terms`. This README is not deplo
 | Page | URL | Used for |
 | --- | --- | --- |
 | `index.html` | `/` | Landing page. Play Console *Website*, App Store *Marketing URL* |
-| `privacy.html` | `/privacy` | Privacy policy: Play Console, App Store Connect, Microsoft Store; link from the game |
+| `privacy-policy.html` | `/privacy-policy` | Privacy policy: Play Console, App Store Connect, Microsoft Store; link from the game |
 | `terms.html` | `/terms` | Terms of Service / EULA: Play Console *Terms of Service*, App Store Connect *License Agreement* (custom EULA; includes Apple's required terms) |
 | `support.html` | `/support` | Support URL (required by App Store Connect), FAQ and contact |
 | `delete-account.html` | `/delete-account` | Account deletion URL (required by Play Console for apps with accounts) |
@@ -31,4 +31,4 @@ firebase deploy --only hosting
 
 Firebase gives `https://<project-id>.web.app` with SSL; a custom domain can be added in the Firebase console.
 After a custom domain is live, update the *Website* field in both stores so AdMob finds `app-ads.txt`.
-Change the effective date at the top of `privacy.html` or `terms.html` whenever their content changes.
+Change the effective date at the top of `privacy-policy.html` or `terms.html` whenever their content changes.
