@@ -1,7 +1,8 @@
 # Swipe Dash website
 
-Static public site with the pages the stores ask for. Firebase Hosting serves it (`firebase.json` → `hosting`)
-with clean URLs, so `terms.html` is served at `/terms`. This README is not deployed.
+Static public site with the pages the stores ask for, hosted on GitHub Pages. Every page carries its own styles and
+icon, so a page works even when uploaded on its own; only `index.html` also needs `assets/` (`hero.jpg` and `shots/`).
+GitHub Pages serves `terms.html` at `/terms` as well.
 
 | Page | URL | Used for |
 | --- | --- | --- |
@@ -22,13 +23,9 @@ Microsoft Store: https://apps.microsoft.com/detail/9p6rdr6mfp29
 When the App Store listing exists, add a "Download on the App Store" button next to the Google Play one in
 `index.html`, plus `<meta name="apple-itunes-app" content="app-id=<numeric id>">` in its head.
 
-## Deploy
+## Deploy (GitHub Pages)
 
-```sh
-firebase emulators:start --only hosting   # preview at http://localhost:5000
-firebase deploy --only hosting
-```
-
-Firebase gives `https://<project-id>.web.app` with SSL; a custom domain can be added in the Firebase console.
-After a custom domain is live, update the *Website* field in both stores so AdMob finds `app-ads.txt`.
+Copy everything in this folder except this README into the Pages repo, keeping `assets/` next to `index.html`.
+`app-ads.txt` only works at the root of a domain (`https://yourdomain/app-ads.txt` or `https://<user>.github.io/`),
+not under a project path like `https://<user>.github.io/<repo>/`; set that domain as *Website* in both stores.
 Change the effective date at the top of `privacy-policy.html` or `terms.html` whenever their content changes.
